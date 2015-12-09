@@ -1,0 +1,15 @@
+<%= form_for(@photo) do |f| %>
+  <%= f.label :name %>
+  <%= f.text_field :name %>  
+  <%= f.label :photo_image %>
+  <%= f.file_field :photo_image %>
+  <%= f.submit %>
+<% end %>
+
+<p></p>
+<p></p>
+<p></p>
+<p></p>
+<p></p>
+<span>リンク</span>
+<%= link_to photos_path,photos_path %>

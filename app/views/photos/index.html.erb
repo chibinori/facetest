@@ -1,0 +1,19 @@
+<% @photos.each do | photo | %>
+  <div><%= photo.name%></div>
+
+  <div>
+    <%= image_tag photo.photo_image.url %>
+  </div>
+  <%= link_to photos_path,photos_path %>
+  <%= link_to '消去', photo, method: :delete,
+                                       data: { confirm: '良いですか？' } %>
+<% end %>
+
+<p></p>
+<p></p>
+<p></p>
+<p></p>
+<p></p>
+<span>リンク</span>
+<%= link_to photos_path,photos_path %>
+<%= link_to new_photo_path,new_photo_path %>
